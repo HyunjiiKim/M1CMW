@@ -1,0 +1,157 @@
+body{
+    font-family: Verdana, "Time New Roman", Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-transform: uppercase;
+}
+
+header{
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 20%;
+    height: 100%;
+    background-color: #FADD29;
+    place-items: center;
+    display: grid;
+    transition: background-color 1s ease;
+
+}
+
+.logo:hover{
+    background-color: #FF66DF;
+}
+
+.banner{
+    flex: 1;
+    height: 100%;
+    background-color: #F79F3A;
+    place-items: center;
+    display: grid;
+    transition: color 0.5s ease;
+}
+
+.banner:active{
+    color: #43D220;
+}
+
+
+nav{
+    width: 100%;
+    height: 50px;
+    background-color: #F7603A;
+    place-items: center;
+    display: grid;
+    margin-top: 0;
+}
+
+
+
+.slider{
+    width: 100%;
+    height: 200px;
+    background-color: #4B9CFD;
+    place-items: center;
+    display: grid;
+    transition: background-color 1s ease, color 1s ease;
+}
+
+.slider:hover{
+    background-color: transparent;
+    color: black;
+}
+
+#edito{
+    height: 100px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    
+}
+
+.edito1{
+    width: 50%;
+    height: 100%;
+    background-color: #3BCA35;
+    place-items: center;
+    display: grid;
+}
+
+.edito2{
+    width: 50%;
+    height: 100%;
+    background-color: #31A62C;
+    place-items: center;
+    display: grid;
+}
+
+#article{
+    height: 200px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.article1{
+    width: 33.33%;
+    height: 100%;
+    background: #FBB830;
+    place-items: center;
+    display: grid;
+}
+
+.article2{
+    width: 33.33%;
+    height: 100%;
+    background: #FA9728;
+    place-items: center;
+    display: grid;
+}
+
+.article3{
+    width: 33.33%;
+    display: flex;
+}
+
+.colonne1, .colonne2{
+    width: 50%;
+    height: 100%;
+    background-color: #EE6709;
+    place-items: center;
+    display: grid;
+    border-style: dotted; /*pointillées*/
+    border-width: 2px;
+    border-color: #EE4709;
+    box-sizing: border-box;
+
+}
+
+footer{
+    width: 100%;
+    height: 200px;
+    background-color: #B142E5;
+    place-items: center;
+    display: grid;
+}
+
+
+footer p{
+    animation: moveDown 1s linear infinite;
+}
+
+@keyframes moveDown{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+
+footer p:hover{
+    animation-play-state: paused;
+}
