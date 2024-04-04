@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lettre de Motivation_ Hyunji KIM _ Developpeur UI</title>
+    <style>
+
+        .section-div{
+            margin: 15px auto;
+            font-size: 16pt;
+        }
+
+        .balloon {
+            position: absolute;
+            bottom: -75px; 
+            width: 75px; 
+            height: auto; 
+            animation: blowUp 12s linear infinite; 
+        }
+
+        @keyframes blowUp {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-100vh); 
+            }
+        }
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            margin-top: 300px;
+            font-size: 14px;
+            height: 120px;
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+        }
+    </style>
+</head>
+<body style="margin: 20px auto 0px; width: 1200px; font-family: Arial, Helvetica, sans-serif;">
+    <header style="background-color: #fff; color:#545454; font-size: 16pt;">
+        <div style="width: fit-content;"><img src="https://particuliers.sg.fr/static/Resources/img/logo/logo-sg-seul.svg"></div>
+    </header>
+    <section style="margin-top: 120px;">
+        <div style="  margin: 30px auto; font-size: 16pt;">Objet : Candidature pour le poste de Developpeur Front UI en alternance chez Société Générale</div>
+        <div class="section-div">Madame, Monsieur,</div>
+        <div class="section-div">Actuellement en deuxième année de Master Cultures et Métiers du Web à l'Université Gustave Eiffel, je suis vivement intéressée par le poste de développeur UI au sein de la Société Générale. Mon attrait pour le secteur bancaire, combiné à mon expertise en développement web, fait de cette opportunité une étape naturelle dans ma carrière.</div>
+        <div class="section-div">Au cours de mes études et de mes expériences antérieures, j'ai pu observer comment l'interface utilisateur joue un rôle essentiel dans l'expérience des clients dans le secteur bancaire. Je suis fascinée par la manière dont la technologie transforme la manière dont les services financiers sont proposés et utilisés. C'est cette convergence entre la technologie et la finance qui m'inspire et me motive à poursuivre une carrière dans le développement UI, en particulier au sein d'une institution prestigieuse comme la Société Générale.</div>
+        <div class="section-div">Mon parcours académique m'a permis de développer une solide expertise en développement web et en conception d'interfaces utilisateur. Je maîtrise les langages de programmation tels que HTML, CSS et JavaScript, ainsi que les frameworks et les outils modernes utilisés dans le développement UI. De plus, mon expérience antérieure m'a enseigné l'importance de comprendre les besoins des utilisateurs et de les traduire en interfaces intuitives et esthétiques.</div>
+        <div class="section-div">Travailler chez Société Générale représente pour moi une occasion de combiner ma passion pour la technologie avec mon intérêt pour le secteur bancaire. Je suis convaincue que mes compétences techniques, ma capacité d'adaptation et mon désir d'apprendre seront des atouts précieux pour votre équipe.</div>
+        <div class="section-div">Je suis disponible pour un entretien à votre convenance afin de discuter plus en détail de ma candidature et de la manière dont je pourrais contribuer au succès de la Société Générale en tant que développeur UI. Je vous remercie pour l'attention que vous porterez à ma demande et je reste à votre disposition pour toute information supplémentaire.</div>
+        <div class="section-div">Hyunji KIM</div>
+    </section>
+    <footer>
+        <div>©2024 Hyunji KIM. All Right Reserved.</div>
+    </footer>
+    <script>
+       
+        window.addEventListener('DOMContentLoaded', function() {
+            var section = document.querySelector('section');
+            var numBalloons = 30; 
+            var sectionWidth = section.offsetWidth;
+            var balloonWidth = 75; 
+            for (var i = 0; i < numBalloons; i++) {
+                var balloon = document.createElement('img');
+                balloon.src = 'https://images.emojiterra.com/google/noto-emoji/unicode-15/color/512px/1f388.png';
+                balloon.classList.add('balloon');
+                var randomLeft = Math.random() * (sectionWidth - balloonWidth);
+                var delay = Math.random() * 10000; 
+                balloon.style.animationDelay = delay + '2000ms';
+                balloon.style.left = randomLeft + 'px';
+                section.appendChild(balloon);
+            }
+        });
+    </script>
+</body>
+</html>
