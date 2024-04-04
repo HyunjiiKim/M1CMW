@@ -13,7 +13,7 @@
 
         .balloon {
             position: absolute;
-            bottom: -50vh; 
+            bottom: 100%; 
             width: 75px; 
             height: auto; 
             animation: blowUp 12s linear infinite; 
@@ -24,7 +24,7 @@
                 transform: translateY(0);
             }
             100% {
-                transform: translateY(-100vh); 
+                transform: translateY(-200vh); 
             }
         }
 
@@ -59,22 +59,25 @@
     </footer>
     <script>
        
-        window.addEventListener('DOMContentLoaded', function() {
-            var section = document.querySelector('section');
-            var numBalloons = 30; 
-            var sectionWidth = section.offsetWidth;
-            var balloonWidth = 75; 
-            for (var i = 0; i < numBalloons; i++) {
-                var balloon = document.createElement('img');
-                balloon.src = 'https://images.emojiterra.com/google/noto-emoji/unicode-15/color/512px/1f388.png';
-                balloon.classList.add('balloon');
-                var randomLeft = Math.random() * (sectionWidth - balloonWidth);
-                var delay = Math.random() * 10000; 
-                balloon.style.animationDelay = delay + '2000ms';
-                balloon.style.left = randomLeft + 'px';
-                section.appendChild(balloon);
-            }
-        });
+       window.addEventListener('DOMContentLoaded', function() {
+        var section = document.querySelector('section');
+        var numBalloons = 30; 
+        var sectionWidth = section.offsetWidth;
+        var sectionHeight = section.offsetHeight; // Get the height of the section
+        var balloonWidth = 75; 
+        for (var i = 0; i < numBalloons; i++) {
+            var balloon = document.createElement('img');
+            balloon.src = 'https://images.emojiterra.com/google/noto-emoji/unicode-15/color/512px/1f388.png';
+            balloon.classList.add('balloon');
+            var randomLeft = Math.random() * (sectionWidth - balloonWidth);
+            var randomBottom = Math.random() * sectionHeight; // Set random bottom position based on section height
+            var delay = Math.random() * 10000; 
+            balloon.style.animationDelay = delay + '2000ms';
+            balloon.style.left = randomLeft + 'px';
+            balloon.style.bottom = "-" + randomBottom + "px"; // Set the bottom position
+            section.appendChild(balloon);
+        }
+    });
     </script>
 </body>
 </html>
